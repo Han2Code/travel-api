@@ -1,2 +1,41 @@
-<h1>Travel#search</h1>
-<p>Find me in app/views/travel/search.html.erb</p>
+<div class="container">
+  <div class="row mt-5">
+    
+    <div class="col-lg-6">
+
+      <h4>Country info</h4>
+      <dl>
+        <dt>Country</dt>
+        <dd><%= @country['name'] %></dd>
+        <dt>Capital</dt>
+        <dd><%= @country['capital'] %></dd>
+        <dt>Currency</dt>
+        <dd><%= @country['currencies'].join(', ') %></dd>
+        <dt>Timezone(s)</dt>
+        <dd><%= @country['timezones'].join(', ') %></dd>
+      </dl>
+
+    </div>
+
+
+    <div class="col-lg-6">
+        <h4>Weather</h4>
+
+        <p>Temperature: <%= to_fahrenheit @weather['main']['temp'] %></p>
+
+        <p>Feels Like: <%= to_fahrenheit @weather['main']['feels_like'] %></p>
+        
+        <p>Temp Min: <%= to_fahrenheit @weather['main']['temp_min'] %></p>
+
+        <p>Temp Min: <%= to_fahrenheit @weather['main']['temp_max'] %></p>
+
+        <p>Pressure: <%= @weather['main']['pressure'] %></p>
+
+        <p>Humidity: <%= @weather['main']['humidity'] %>%</p>
+
+    </div>
+
+
+
+  </div>
+</div>
