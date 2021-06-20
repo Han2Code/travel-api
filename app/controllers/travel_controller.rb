@@ -11,7 +11,7 @@ class TravelController < ApplicationController
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
     request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-key"] = 'fb582c8a59msh7ff2862d9aa0244p1e0ca7jsn83e3f796c4ca'
+    request["x-rapidapi-key"] = ENV.fetch('RAPIDAPI_API_KEY')
     request["x-rapidapi-host"] = 'restcountries-v1.p.rapidapi.com'
 
     response = http.request(request)
@@ -35,7 +35,7 @@ class TravelController < ApplicationController
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
     request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-key"] = 'fb582c8a59msh7ff2862d9aa0244p1e0ca7jsn83e3f796c4ca'
+    request["x-rapidapi-key"] = ENV.fetch('RAPIDAPI_API_KEY')
     request["x-rapidapi-host"] = 'community-open-weather-map.p.rapidapi.com'
 
     response = http.request(request)

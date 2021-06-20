@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 6 Api - Travel Api
 
-Things you may want to cover:
+Giving a City returns the Capital, Currency, Timezone and Actual Weather.
 
-* Ruby version
 
-* System dependencies
+Based in RapidApi examples.
 
-* Configuration
+Using:
 
-* Database creation
+gem 'uri'
+gem 'openssl'
+gem 'net-http'
 
-* Database initialization
+as indicated in RapidApi
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Ruby 3.0.0
 
-* Deployment instructions
 
-* ...

@@ -87,6 +87,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    io-wait (0.1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     listen (3.5.1)
@@ -102,6 +103,12 @@ GEM
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
+    net-http (0.1.1)
+      net-protocol
+      uri
+    net-protocol (0.1.1)
+      io-wait
+      timeout
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
@@ -177,6 +184,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    timeout (0.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -206,6 +214,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-darwin-20
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
@@ -214,6 +223,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  net-http
   openssl
   puma (~> 4.1)
   rails (~> 6.0.4)
@@ -230,7 +240,7 @@ DEPENDENCIES
   webpacker (~> 5.4)
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 3.0.0p0
 
 BUNDLED WITH
    2.2.20
